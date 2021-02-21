@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@200;300;400;500;600;700&display=swap');
+
+
+*,
+*::after,
+*::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+    
+}
+
+body{
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.nav_bar .navbar-brand{
+    font-size: 2rem;
+    color: cyan;
+    transition: 0.5s linear;
+    padding: 1rem 0;
+}
+
+.navbar-brand .fa-snowflake{
+    transition: all linear;
+    animation: showring 2s linear infinite ;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.nav_bar li{
+    font-size: 2rem;
+    padding: 0 1rem;
+}
+
+.nav_bar .navbar-brand:hover > .fa-snowflake{
+    color:blueviolet;
+    transition: 0.5s;
+}
+
+
+
+.left_part{
+ display: flex;
+ justify-content: center;
+ align-items: flex-start;
+ flex-direction: column;
+ height: auto;
+}
+
+.left_part p {
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+
+.left_part p span{
+    color: cyan;
+}
+
+.btn{
+    padding:0.5rem 3.5rem;
+    border-radius: 1.5rem;
+    background: #6C63FF;
+    font-size: 1.2rem;
+    color: #fff;
+    transition: 0.5s;
+    -webkit-box-shadow: 5px 7px 11px -2px #000000; 
+    box-shadow: 5px 7px 11px -2px #000000;
+    margin-top: 2rem;
+}
+
+.btn:hover{
+    -webkit-box-shadow: 5px 5px 15px 5px cyan; 
+box-shadow: 5px 5px 15px 5px cyan;
+}
+
+.righ_part{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: auto;
+   }
+   
+
+footer{
+    background-color: #343A40;
+    padding: 1.5rem 0;
+    margin-top: auto;
+}
+/*footer*/
+.footer{
+    text-align: center;
+    color: #fff;
+    font-size: 1.2rem;
+    
+}
+
+
+.footer span{
+    color: red;
+    padding:  0.3rem;
+}
+
+
+@keyframes showring {
+    from{
+        transform: rotate(0deg)
+    }
+
+    to{
+        transform: rotate(360deg)
+    }
+}
+
+/*error page section*/
+
+.error_page img{
+    width: 45%; 
+}
+
+
+/*About page section*/
+
+
+
+
+
+
+
+
+
+
+/*Weather part*/
+
+.temp_area{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.main_content{
+    margin: 5rem 0;
+} 
+.main_content{
+    width: 60%;
+}
+
+
+.main_content form input[type='text']{
+
+    padding: 1rem;
+    width: 100% ;
+    position: relative;
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    border: none;
+    outline: none;
+    background-color:rgb(33, 25, 25) ;
+    color: #fff;
+    
+}
+
+
+.main_content form input[type='submit']{
+    position: absolute;
+    padding: 0.7rem 2.3rem;
+    border-radius: 2.5rem;
+    right: 24rem;
+    color: #fff;
+    font-size: 1.6rem;
+    background: aqua;
+    transition: 0.5s;
+    border: none;
+    outline: none;
+    margin-top: 0.3rem;
+    
+}
+
+.main_content form input[type='submit']:hover{
+    color: black;
+    -webkit-box-shadow: 5px 5px 15px 5px #fff; 
+    box-shadow: 5px 5px 15px 5px #fff;
+    right: 25rem;
+
+
+}
+
+.tempinfo{
+    border-radius: 1rem;
+    width: 25rem;
+    background-color: #343A40;
+
+}
+
+.tempinfo .top_layer{
+    display: flex;
+    justify-content: space-between;
+    width: 25rem;
+    background: #2b2d2e;
+    padding:  1.5rem ;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 1rem  1rem 0 0;
+    
+}
+
+.tempinfo .top_layer p{
+    margin-bottom: 0;
+}
+
+.main_layer {
+    padding: 2rem;
+    
+}
+
+.main_layer p {
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+
+.middle_layer_data_hide
+{
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s;
+    
+    
+
+}
+
+.middle_layer_data_hide p{
+    font-size: 4rem;
+    margin-top: 1rem;
+    font-weight: 900;
+       
+}
+
+/*Weather status color*/
+
+.fa-cloud-meatball{
+    color: #0D96D5;
+}
+
+
+ .fa-sun{
+     color: #eccc68;
+ } 
+
+ .fa-cloud-rain{
+     color: #999dac;
+ }
+
+ .fa-cloud-showers-heavy{
+     color: #2271ca;
+ }
+
+
+
+
+
+
+
+
+
+
+
+/*responsive design*/
+
+@media (max-width : 768px){
+    .left_part{
+        height: auto;
+        margin: 5rem 0;
+    } 
+
+    .righ_part{
+        height: auto !important;
+        margin-top: 3rem !important; 
+    }
+
+    .error_page img{
+        width: 100%; 
+       
+    }
+
+    .main_content{
+        width:80%;
+    }
+    
+
+   
+
+    .main_content form input[type='submit'] {
+        right: 5.5rem;
+    }
+
+}
+
+
+
+
+
+@media (max-width : 1024px){
+    .left_part{
+        height: auto ;
+        margin: 5rem 0;
+    } 
+
+    .righ_part{
+        height: auto ;
+        margin-top: 3rem ; 
+    }
+    .error_page img{
+        width: 100%; 
+       
+    }
+    
+  
+
+
+}
